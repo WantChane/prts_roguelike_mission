@@ -82,10 +82,10 @@ for ms_name in mission_name_list:
     
     print(info_mission)
 
-    way = '{}.json'.format(ms_name)
+    way = 'info/{}.json'.format(ms_name)
     with open(way,'w',encoding='utf-8-sig') as f:
         line = json.dumps(dict(info_mission),indent=4,ensure_ascii=False)
         f.write(line)
     time.sleep(1)
-    break #测试用
+    break #测试用 爬取请注释此行
 driver.quit()
